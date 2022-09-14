@@ -14,7 +14,12 @@ struct Endpoints {
 
 enum Page: String {
     
-    case character = "character"
-    case location = "location"
-    case episode = "episode"
+    case character = "character/"
+    case location = "location/"
+    case episode = "episode/"
+}
+
+enum Param: String {
+
+    case name = "?name="
 }
