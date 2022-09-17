@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     // Create search controller
     let searchController = UISearchController(searchResultsController: nil)
-    var network = Network()
+    var networkDataFecther = NetworkDataFetcher()
     var searchResponse: SearchResponse? = nil
     var timer: Timer?
     
@@ -29,17 +29,6 @@ class ViewController: UIViewController {
         settingSearchBar()
         setTabelView()
         setConstraints()
-        
-//        var urlForSearch = "https://rickandmortyapi.com/api/character/?name=Rick%20Sanchez"
-//        network.request(url: Endpoints.BASE_URL + Page.character.rawValue + "\(searchText)") { [weak self] result in
-//            switch result {
-//            case .success(let response):
-//                self?.searchResponse = response
-//                self?.tableView.reloadData()
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
     }
 }
 

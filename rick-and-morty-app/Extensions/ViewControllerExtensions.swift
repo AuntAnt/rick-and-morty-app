@@ -18,7 +18,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return searchResponse?.info.count ?? 0
         return searchResponse?.results?.count ?? 0
     }
 
@@ -46,17 +45,18 @@ extension ViewController: UISearchBarDelegate {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.6, repeats: false, block: { _ in
             
-            let urll = Endpoints.BASE_URL + Page.character.rawValue + Param.name.rawValue + "\(searchText)".replacingOccurrences(of: " ", with: "%20")
+            let targerUrl = Endpoints.BASE_URL + Page.character.rawValue
+                + Param.name.rawValue
+                + "\(searchText)"
+                .replacingOccurrences(of: " ", with: "%20")
             
-            self.network.request(url: urll) { [weak self] result in
-                switch result {
-                case .success(let response):
-                    self?.searchResponse = response
-                    self?.tableView.reloadData()
-                case .failure(let error):
-                    print(error)
+            self.networkDataFecther.fetchedCharacters(url: targerUrl, response: {[self] searchResponse in
+                guard searchResponse != nil else {
+                    return
                 }
-            }
+                self.searchResponse = searchResponse
+                self.tableView.reloadData()
+            })
         })
     }
 }

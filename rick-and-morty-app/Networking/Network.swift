@@ -9,7 +9,7 @@ import Foundation
 
 class Network {
     
-    func request(url: String, completion: @escaping (Result<SearchResponse, Error>) -> Void) {
+    func request(url: String, completion: @escaping (Result<Data, Error>) -> Void) {
         
         // Creating url and checking it is not nil, else exit the method
         guard let url = URL(string: url) else { return }
@@ -21,21 +21,13 @@ class Network {
             // Loading data in async tread, and interface is not lagging
             DispatchQueue.main.async {
                 if error != nil {
-                    print("Error")
                     completion(.failure(error!))
                     return
                 }
                 guard let data = data else {
                     return
                 }
-                
-                do {
-                    let result = try JSONDecoder().decode(SearchResponse.self, from: data)
-                    completion(.success(result))
-                } catch let jsonError {
-                    print(jsonError)
-                    completion(.failure(jsonError))
-                }
+                completion(.success(data))
             }
         }
         
