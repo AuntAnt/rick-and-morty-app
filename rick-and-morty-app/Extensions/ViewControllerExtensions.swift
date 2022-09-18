@@ -10,10 +10,14 @@ import UIKit
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CharacterTableCell else { fatalError() }
         
-        let chrctr = searchResponse?.results?[indexPath.row]
-        cell.textLabel?.text = chrctr?.name
+        let character = searchResponse?.results?[indexPath.row]
+        
+        if let character = character {
+            cell.setupCell(character)
+        }
+        
         return cell
     }
 
@@ -25,7 +29,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func setTabelView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CharacterTableCell.self, forCellReuseIdentifier: "cell")
     }
 
     // Set searchBar
