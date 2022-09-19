@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4BC85E28D8E98700262BAF /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BC85D28D8E98700262BAF /* UIImageView.swift */; };
+		9B4BC86028D8F07A00262BAF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BC85F28D8F07A00262BAF /* CacheManager.swift */; };
 		9B718C1C28CC8D6F00825DA9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */; };
 		9B718C2128CCECF300825DA9 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2028CCECF300825DA9 /* ViewControllerExtensions.swift */; };
 		9B718C2328CE621D00825DA9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2228CE621D00825DA9 /* Network.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4BC85D28D8E98700262BAF /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		9B4BC85F28D8F07A00262BAF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		9B718C2028CCECF300825DA9 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9B718C2228CE621D00825DA9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			children = (
 				9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */,
 				9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */,
+				9B4BC85F28D8F07A00262BAF /* CacheManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9B718C2028CCECF300825DA9 /* ViewControllerExtensions.swift */,
+				9B4BC85D28D8E98700262BAF /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 				9B718C2728CFA8EE00825DA9 /* Character.swift in Sources */,
 				9BF71CE228CA4E2400072575 /* ViewController.swift in Sources */,
 				9B718C1C28CC8D6F00825DA9 /* Endpoints.swift in Sources */,
+				9B4BC85E28D8E98700262BAF /* UIImageView.swift in Sources */,
+				9B4BC86028D8F07A00262BAF /* CacheManager.swift in Sources */,
 				9B718C2A28D2499900825DA9 /* SearchResponse.swift in Sources */,
 				9BDF633528D61DF500D84017 /* NetworkDataFetcher.swift in Sources */,
 				9BF71CDE28CA4E2400072575 /* AppDelegate.swift in Sources */,
