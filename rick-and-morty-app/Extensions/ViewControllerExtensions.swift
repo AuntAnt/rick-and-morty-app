@@ -24,6 +24,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResponse?.results?.count ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let character = searchResponse?.results?[indexPath.row]
+        
+        if let character = character {
+            self.navigationController?.pushViewController(AboutCharacterViewController(character: character), animated: true)
+        }
+    }
 
     // Set tableView
     func setTabelView() {

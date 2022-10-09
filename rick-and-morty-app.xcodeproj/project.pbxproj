@@ -14,6 +14,7 @@
 		9B718C2328CE621D00825DA9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2228CE621D00825DA9 /* Network.swift */; };
 		9B718C2728CFA8EE00825DA9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2628CFA8EE00825DA9 /* Character.swift */; };
 		9B718C2A28D2499900825DA9 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2928D2499900825DA9 /* SearchResponse.swift */; };
+		9BC7BC5F28F2C701009E0427 /* AboutCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC7BC5E28F2C701009E0427 /* AboutCharacterViewController.swift */; };
 		9BDF633228D613DD00D84017 /* CharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF633128D613DD00D84017 /* CharacterTableCell.swift */; };
 		9BDF633528D61DF500D84017 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */; };
 		9BF71CDE28CA4E2400072575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF71CDD28CA4E2400072575 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		9B718C2228CE621D00825DA9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		9B718C2628CFA8EE00825DA9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9B718C2928D2499900825DA9 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		9BC7BC5E28F2C701009E0427 /* AboutCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCharacterViewController.swift; sourceTree = "<group>"; };
 		9BDF633128D613DD00D84017 /* CharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableCell.swift; sourceTree = "<group>"; };
 		9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		9BF71CDA28CA4E2400072575 /* rick-and-morty-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rick-and-morty-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF71CE128CA4E2400072575 /* ViewController.swift */,
+				9BC7BC5E28F2C701009E0427 /* AboutCharacterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				9BF71CE228CA4E2400072575 /* ViewController.swift in Sources */,
 				9B718C1C28CC8D6F00825DA9 /* Endpoints.swift in Sources */,
 				9B4BC85E28D8E98700262BAF /* UIImageView.swift in Sources */,
+				9BC7BC5F28F2C701009E0427 /* AboutCharacterViewController.swift in Sources */,
 				9B4BC86028D8F07A00262BAF /* CacheManager.swift in Sources */,
 				9B718C2A28D2499900825DA9 /* SearchResponse.swift in Sources */,
 				9BDF633528D61DF500D84017 /* NetworkDataFetcher.swift in Sources */,
