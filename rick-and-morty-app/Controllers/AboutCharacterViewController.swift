@@ -26,13 +26,22 @@ class AboutCharacterViewController: UIViewController {
     let characterStatus: UILabel = {
         let status = UILabel()
         status.translatesAutoresizingMaskIntoConstraints = false
+        status.font = status.font.withSize(20)
         return status
     }()
     
     let characterSpecies: UILabel = {
         let species = UILabel()
         species.translatesAutoresizingMaskIntoConstraints = false
+        species.font = species.font.withSize(20)
         return species
+    }()
+    
+    let lastKnownLoacation: UILabel = {
+        let location = UILabel()
+        location.translatesAutoresizingMaskIntoConstraints = false
+        location.font = location.font.withSize(20)
+        return location
     }()
     
     override func viewDidLoad() {
@@ -46,6 +55,9 @@ class AboutCharacterViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.characterImage.getImageFromUrl(imageUrl: character.image)
         self.characterName.text = character.name
+        self.characterStatus.text = character.status
+        self.characterSpecies.text = character.species
+        self.lastKnownLoacation.text = character.locationName
     }
     
     required init?(coder: NSCoder) {
@@ -59,6 +71,9 @@ extension AboutCharacterViewController {
     func addConstraints() {
         view.addSubview(characterImage)
         view.addSubview(characterName)
+        view.addSubview(characterStatus)
+        view.addSubview(characterSpecies)
+        view.addSubview(lastKnownLoacation)
         
         NSLayoutConstraint.activate([
             characterImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -68,7 +83,16 @@ extension AboutCharacterViewController {
             characterImage.widthAnchor.constraint(equalToConstant: 350),
             
             characterName.topAnchor.constraint(equalTo: characterImage.bottomAnchor, constant: 20),
-            characterName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            characterName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            characterStatus.topAnchor.constraint(equalTo: characterName.bottomAnchor, constant: 15),
+            characterStatus.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            characterSpecies.topAnchor.constraint(equalTo: characterStatus.bottomAnchor, constant: 15),
+            characterSpecies.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            lastKnownLoacation.topAnchor.constraint(equalTo: characterSpecies.bottomAnchor, constant: 15),
+            lastKnownLoacation.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         ])
     }
 }
