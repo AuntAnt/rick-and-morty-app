@@ -9,12 +9,13 @@ import UIKit
 
 class CharacterTableCell: UITableViewCell {
     
-    var characterImage: UIImageView = {
+    private var characterImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    var characterName: UILabel = {
+    
+    private var characterName: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -29,7 +30,7 @@ class CharacterTableCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(_ character: Character) {
+    func setupCell(_ character: SearchResponse.Character) {
         self.characterName.text = character.name
         
         self.characterImage.getImageFromUrl(imageUrl: character.image)

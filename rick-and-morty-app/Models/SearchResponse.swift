@@ -10,14 +10,44 @@ import Foundation
 struct SearchResponse: Decodable {
     
     let results: [Character]?
+}
+
+extension SearchResponse {
     
-    enum CodingKeys: String, CodingKey {
-        case results
+    struct Character: Decodable {
+
+        let name: String
+        let status: String
+        let species: String
+        let gender: String
+        let locationName: String
+        let image: String
+
+        enum CodingKeys: String, CodingKey {
+
+            case location
+
+            case name, status, species, gender, image
+        }
+
+        init(from decoder: Decoder) throws {
+            // Get root response container
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            print(try decoder.singleValueContainer())
+
+            // Decode properties from root containder
+            self.name = try container.decode(String.self, forKey: .name)
+            self.status = try container.decode(String.self, forKey: .status)
+            self.species = try container.decode(String.self, forKey: .species)
+            self.gender = try container.decode(String.self, forKey: .gender)
+            self.image = try container.decode(String.self, forKey: .image)
+
+            // Get location container from root
+            let location = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .location)
+
+            // Decode location name from location container
+            self.locationName = try location.decode(String.self, forKey: .name)
+        }
     }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        self.results = try container.decode([Character].self, forKey: .results)
-    }
+
 }

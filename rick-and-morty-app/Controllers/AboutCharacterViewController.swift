@@ -51,7 +51,7 @@ class AboutCharacterViewController: UIViewController {
         addConstraints()
     }
     
-    init(character: Character) {
+    init(character: SearchResponse.Character) {
         super.init(nibName: nil, bundle: nil)
         self.characterImage.getImageFromUrl(imageUrl: character.image)
         self.characterName.text = character.name
