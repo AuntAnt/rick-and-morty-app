@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkDataFetcher {
     
-    let networkService = Network()
+    private let networkService = Network()
     
     func fetchedCharacters(url: String, response: @escaping (SearchResponse?) -> Void) {
         networkService.request(url: url) { (result) in
