@@ -35,14 +35,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    // Set tableView
+    // MARK: - Set tableView
     func setTabelView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(CharacterTableCell.self, forCellReuseIdentifier: "cell")
     }
 
-    // Set searchBar
+    // MARK: - Set searchBar
     func settingSearchBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Characters"

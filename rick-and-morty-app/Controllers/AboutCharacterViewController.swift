@@ -10,34 +10,34 @@ import UIKit
 
 class AboutCharacterViewController: UIViewController {
     
-    let characterImage: UIImageView = {
+    private let characterImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
-    let characterName: UILabel = {
+    private let characterName: UILabel = {
         let name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
         name.font = UIFont.boldSystemFont(ofSize: 30)
         return name
     }()
     
-    let characterStatus: UILabel = {
+    private let characterStatus: UILabel = {
         let status = UILabel()
         status.translatesAutoresizingMaskIntoConstraints = false
         status.font = status.font.withSize(20)
         return status
     }()
     
-    let characterSpecies: UILabel = {
+    private let characterSpecies: UILabel = {
         let species = UILabel()
         species.translatesAutoresizingMaskIntoConstraints = false
         species.font = species.font.withSize(20)
         return species
     }()
     
-    let lastKnownLoacation: UILabel = {
+    private let lastKnownLoacation: UILabel = {
         let location = UILabel()
         location.translatesAutoresizingMaskIntoConstraints = false
         location.font = location.font.withSize(20)

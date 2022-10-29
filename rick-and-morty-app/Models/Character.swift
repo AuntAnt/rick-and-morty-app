@@ -9,17 +9,17 @@ import Foundation
 
 struct Character: Decodable {
     
-    var name: String
-    var status: String
-    var species: String
-    var gender: String
-    var locationName: String
-    var image: String
+    let name: String
+    let status: String
+    let species: String
+    let gender: String
+    let locationName: String
+    let image: String
     
     enum CodingKeys: String, CodingKey {
-        
+
         case location
-        
+
         case name, status, species, gender, image
     }
     

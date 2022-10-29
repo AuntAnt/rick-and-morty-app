@@ -7,11 +7,13 @@
 
 import Foundation
 
+//MARK: URLs
 struct Endpoints {
     
     static let BASE_URL = "https://rickandmortyapi.com/api/"
 }
 
+//MARK: Pages
 enum Page: String {
     
     case character = "character/"
@@ -19,6 +21,7 @@ enum Page: String {
     case episode = "episode/"
 }
 
+//MARK: Query params
 enum Param: String {
 
     case name = "?name="
