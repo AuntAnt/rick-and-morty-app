@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		9B4BC85E28D8E98700262BAF /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BC85D28D8E98700262BAF /* UIImageView.swift */; };
 		9B4BC86028D8F07A00262BAF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BC85F28D8F07A00262BAF /* CacheManager.swift */; };
-		9B718C1C28CC8D6F00825DA9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */; };
 		9B718C2128CCECF300825DA9 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2028CCECF300825DA9 /* ViewControllerExtensions.swift */; };
 		9B718C2328CE621D00825DA9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2228CE621D00825DA9 /* Network.swift */; };
 		9B718C2A28D2499900825DA9 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B718C2928D2499900825DA9 /* SearchResponse.swift */; };
+		9BC3994E290D77D30098B675 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3994D290D77D30098B675 /* Constants.swift */; };
+		9BC39950290DA80A0098B675 /* StatusColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3994F290DA80A0098B675 /* StatusColor.swift */; };
 		9BC7BC5F28F2C701009E0427 /* AboutCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC7BC5E28F2C701009E0427 /* AboutCharacterViewController.swift */; };
 		9BDF633228D613DD00D84017 /* CharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF633128D613DD00D84017 /* CharacterTableCell.swift */; };
 		9BDF633528D61DF500D84017 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */; };
@@ -25,10 +26,11 @@
 /* Begin PBXFileReference section */
 		9B4BC85D28D8E98700262BAF /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9B4BC85F28D8F07A00262BAF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
-		9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		9B718C2028CCECF300825DA9 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9B718C2228CE621D00825DA9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		9B718C2928D2499900825DA9 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		9BC3994D290D77D30098B675 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BC3994F290DA80A0098B675 /* StatusColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusColor.swift; sourceTree = "<group>"; };
 		9BC7BC5E28F2C701009E0427 /* AboutCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCharacterViewController.swift; sourceTree = "<group>"; };
 		9BDF633128D613DD00D84017 /* CharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableCell.swift; sourceTree = "<group>"; };
 		9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
@@ -54,9 +56,10 @@
 		9B718C1A28CC8D2A00825DA9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9B718C1B28CC8D6F00825DA9 /* Endpoints.swift */,
 				9BDF633428D61DF500D84017 /* NetworkDataFetcher.swift */,
 				9B4BC85F28D8F07A00262BAF /* CacheManager.swift */,
+				9BC3994D290D77D30098B675 /* Constants.swift */,
+				9BC3994F290DA80A0098B675 /* StatusColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -209,13 +212,14 @@
 				9B718C2328CE621D00825DA9 /* Network.swift in Sources */,
 				9B718C2128CCECF300825DA9 /* ViewControllerExtensions.swift in Sources */,
 				9BF71CE228CA4E2400072575 /* ViewController.swift in Sources */,
-				9B718C1C28CC8D6F00825DA9 /* Endpoints.swift in Sources */,
 				9B4BC85E28D8E98700262BAF /* UIImageView.swift in Sources */,
+				9BC39950290DA80A0098B675 /* StatusColor.swift in Sources */,
 				9BC7BC5F28F2C701009E0427 /* AboutCharacterViewController.swift in Sources */,
 				9B4BC86028D8F07A00262BAF /* CacheManager.swift in Sources */,
 				9B718C2A28D2499900825DA9 /* SearchResponse.swift in Sources */,
 				9BDF633528D61DF500D84017 /* NetworkDataFetcher.swift in Sources */,
 				9BF71CDE28CA4E2400072575 /* AppDelegate.swift in Sources */,
+				9BC3994E290D77D30098B675 /* Constants.swift in Sources */,
 				9BDF633228D613DD00D84017 /* CharacterTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

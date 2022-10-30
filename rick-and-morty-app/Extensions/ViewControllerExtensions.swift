@@ -59,8 +59,8 @@ extension ViewController: UISearchBarDelegate {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.6, repeats: false, block: { _ in
             
-            let targerUrl = Endpoints.BASE_URL + Page.character.rawValue
-                + Param.name.rawValue
+            let targerUrl = Constants.baseUrl + Constants.characterPage
+                + Constants.searchNameParam
                 + "\(searchText)"
                 .replacingOccurrences(of: " ", with: "%20")
             

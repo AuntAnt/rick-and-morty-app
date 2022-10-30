@@ -17,7 +17,7 @@ extension SearchResponse {
     struct Character: Decodable {
 
         let name: String
-        let status: String
+        let status: Status
         let species: String
         let gender: String
         let locationName: String
@@ -33,11 +33,10 @@ extension SearchResponse {
         init(from decoder: Decoder) throws {
             // Get root response container
             let container = try decoder.container(keyedBy: CodingKeys.self)
-            print(try decoder.singleValueContainer())
 
             // Decode properties from root containder
             self.name = try container.decode(String.self, forKey: .name)
-            self.status = try container.decode(String.self, forKey: .status)
+            self.status = try container.decode(Status.self, forKey: .status)
             self.species = try container.decode(String.self, forKey: .species)
             self.gender = try container.decode(String.self, forKey: .gender)
             self.image = try container.decode(String.self, forKey: .image)
