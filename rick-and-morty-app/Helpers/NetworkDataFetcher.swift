@@ -16,8 +16,7 @@ class NetworkDataFetcher {
             switch result {
             case .success(let data):
                 do {
-                    let result = try JSONDecoder().decode(SearchResponse.self, from: data)
-                    response(result)
+                    response(try JSONDecoder().decode(SearchResponse.self, from: data))
                 } catch let jsonError {
                     print("Decode json is faled", jsonError)
                     response(nil)
