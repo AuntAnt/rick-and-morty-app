@@ -15,10 +15,6 @@ enum Constants {
     static let locationPage = "location/"
     static let episodePage = "episode/"
     
-    static let statusLabel = "Status:"
-    static let speciesLabel = "Specie:"
-    static let locationLabel = "Last known location:"
-    
     static let searchPageParam = "?page="
     static let searchNameParam = "?name="
 }

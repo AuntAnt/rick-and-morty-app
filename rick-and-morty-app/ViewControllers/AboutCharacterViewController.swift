@@ -20,7 +20,7 @@ class AboutCharacterViewController: UIViewController {
     private let characterName: UILabel = {
         let name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.font = UIFont.boldSystemFont(ofSize: 30)
+        name.font = UIFont.boldSystemFont(ofSize: 25)
         return name
     }()
     
@@ -28,7 +28,7 @@ class AboutCharacterViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(15)
-        label.text = Constants.statusLabel
+        label.text = "Status:"
         return label
     }()
     
@@ -50,7 +50,7 @@ class AboutCharacterViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(15)
-        label.text = Constants.speciesLabel
+        label.text = "Specie:"
         return label
     }()
     
@@ -65,7 +65,7 @@ class AboutCharacterViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(15)
-        label.text = Constants.locationLabel
+        label.text = "Last known location:"
         return label
     }()
     
@@ -125,6 +125,7 @@ extension AboutCharacterViewController {
             
             characterName.topAnchor.constraint(equalTo: characterImage.bottomAnchor, constant: 20),
             characterName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            characterName.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
             statusLabel.topAnchor.constraint(equalTo: characterName.bottomAnchor, constant: 20),
             statusLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
