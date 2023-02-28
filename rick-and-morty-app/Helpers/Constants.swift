@@ -19,9 +19,6 @@ enum Constants {
     static let speciesLabel = "Specie:"
     static let locationLabel = "Last known location:"
     
+    static let searchPageParam = "?page="
     static let searchNameParam = "?name="
-}
-
-enum Status: String, Decodable {
-    case Alive, Dead, unknown
 }

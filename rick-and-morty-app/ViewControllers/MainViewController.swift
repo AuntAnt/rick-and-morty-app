@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  rick-and-morty-app
 //
 //  Created by Anton Kuzmin on 08.09.2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     // Create search controller
     let searchController = UISearchController(searchResultsController: nil)
-    var networkDataFecther = NetworkDataFetcher()
+    let networkDataFetcher = NetworkDataFetcher()
     var searchResponse: SearchResponse? = nil
     var timer: Timer?
     
@@ -33,10 +33,10 @@ class ViewController: UIViewController {
 }
 
 // MARK: - extension for constraints
-extension ViewController {
+extension MainViewController {
     
-    // Set consntraints
-    func setConstraints() {
+    // Set constraints
+    private func setConstraints() {
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

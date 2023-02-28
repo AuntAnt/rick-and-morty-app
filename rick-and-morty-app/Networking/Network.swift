@@ -20,13 +20,15 @@ class Network {
             
             // Loading data in async tread, and interface is not lagging
             DispatchQueue.main.async {
-                if error != nil {
-                    completion(.failure(error!))
+                if let error = error {
+                    completion(.failure(error))
                     return
                 }
+                
                 guard let data = data else {
                     return
                 }
+                
                 completion(.success(data))
             }
         }

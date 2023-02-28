@@ -18,7 +18,7 @@ class NetworkDataFetcher {
                 do {
                     response(try JSONDecoder().decode(SearchResponse.self, from: data))
                 } catch let jsonError {
-                    print("Decode json is faled", jsonError)
+                    print("Decode json is failed", jsonError)
                     response(nil)
                 }
             case .failure(let error):

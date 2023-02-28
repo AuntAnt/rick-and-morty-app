@@ -69,19 +69,12 @@ class AboutCharacterViewController: UIViewController {
         return label
     }()
     
-    private let lastKnownLoacation: UILabel = {
+    private let lastKnownLocation: UILabel = {
         let location = UILabel()
         location.translatesAutoresizingMaskIntoConstraints = false
         location.font = location.font.withSize(20)
         return location
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        addConstraints()
-    }
     
     // MARK: - View initializers
     init(character: SearchResponse.Character) {
@@ -90,19 +83,26 @@ class AboutCharacterViewController: UIViewController {
         self.characterName.text = character.name
         self.characterStatus.text = character.status.rawValue
         self.characterSpecies.text = character.species
-        self.lastKnownLoacation.text = character.locationName
+        self.lastKnownLocation.text = character.locationName
         self.statusIndicator.backgroundColor = StatusColor.identifyStatusColor(characterStatus: character.status)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        
+        addConstraints()
+    }
 }
 
 //MARK: - extension for constraints
 extension AboutCharacterViewController {
     
-    func addConstraints() {
+    private func addConstraints() {
         view.addSubview(characterImage)
         view.addSubview(characterName)
         
@@ -114,7 +114,7 @@ extension AboutCharacterViewController {
         view.addSubview(characterSpecies)
         
         view.addSubview(locationLabel)
-        view.addSubview(lastKnownLoacation)
+        view.addSubview(lastKnownLocation)
         
         NSLayoutConstraint.activate([
             characterImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -144,8 +144,8 @@ extension AboutCharacterViewController {
             
             locationLabel.topAnchor.constraint(equalTo: characterSpecies.bottomAnchor, constant: 20),
             locationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            lastKnownLoacation.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 3),
-            lastKnownLoacation.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+            lastKnownLocation.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 3),
+            lastKnownLocation.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         ])
     }
 }

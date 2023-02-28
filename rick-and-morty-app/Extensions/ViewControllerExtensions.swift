@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CharacterTableCell else { fatalError() }
@@ -53,7 +53,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension MainViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         timer?.invalidate()
@@ -64,7 +64,7 @@ extension ViewController: UISearchBarDelegate {
                 + "\(searchText)"
                 .replacingOccurrences(of: " ", with: "%20")
             
-            self.networkDataFecther.fetchedCharacters(url: targerUrl, response: {[self] searchResponse in
+            self.networkDataFetcher.fetchedCharacters(url: targerUrl, response: {[self] searchResponse in
                 guard searchResponse != nil else {
                     return
                 }

@@ -10,7 +10,7 @@ import UIKit
 
 class CacheManager {
 
-    static var cache = [URL : UIImage]()
+    static var cache: [URL : UIImage] = [:]
     
     static func setImageCache(_ url: URL, _ data: UIImage?) {
         cache[url] = data
